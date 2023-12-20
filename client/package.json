@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@test/database": "workspace:*",
+    "next": "14.0.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@test/tsconfig": "workspace:*",
+    "@types/node": "18.17.1",
+    "@types/react": "18.2.45",
+    "@types/react-dom": "18.2.15",
+    "eslint-config-test": "workspace:*",
+    "vercel": "32.5.3"
+  },
+  "name": "@test/client",
+  "private": true,
+  "scripts": {
+    "build": "vercel build",
+    "pull-vercel": "npx vercel pull --yes",
+    "start": "vercel dev"
+  }
+}

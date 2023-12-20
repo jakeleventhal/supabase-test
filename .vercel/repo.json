@@ -1,0 +1,11 @@
+{
+  "orgId": "<YOUR_ORG_ID>",
+  "projects": [
+    {
+      "directory": "client",
+      "id": "<YOUR_PROJECT_ID>",
+      "name": "<YOUR_PROJECT_NAME>"
+    }
+  ],
+  "remoteName": "origin"
+}

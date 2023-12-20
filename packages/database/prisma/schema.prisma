@@ -1,0 +1,18 @@
+// Docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  output        = "../../../node_modules/@prisma/client/test"
+  binaryTargets = ["native", "rhel-openssl-1.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model AppData {
+  id String @id @default(uuid())
+
+  testField Boolean @default(false)
+}

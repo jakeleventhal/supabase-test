@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "@prisma/client": "5.7.0"
+  },
+  "devDependencies": {
+    "@test/tsconfig": "workspace:*",
+    "@types/node": "18.17.1",
+    "eslint-config-test": "workspace:*",
+    "prisma": "5.7.0"
+  },
+  "files": [
+    "prisma",
+    "src"
+  ],
+  "main": "src/index",
+  "name": "@test/database",
+  "scripts": {
+    "prisma-generate": "prisma generate"
+  },
+  "types": "src/index"
+}

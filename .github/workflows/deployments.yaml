@@ -1,0 +1,35 @@
+name: Deployment
+
+run-name: Deployment - ${{ github.ref_name }}
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  deploy-test-client:
+    runs-on: ubuntu-latest
+    name: Deploy Test Client
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4.1.1
+
+      - name: Install Dependencies
+        shell: bash
+        run: npm i -g pnpm@latest && pnpm install -r
+
+      - name: Run Vercel Build
+        shell: bash
+        working-directory: client
+        run: npx vercel build --prod
+
+      - name: Deploy to Vercel
+        shell: bash
+        run: |
+          npx vercel --prebuilt --prod --token=<YOUR_VERCEL_TOKEN>
+        working-directory: client
+        env:
+          VERCEL_ORG_ID: <YOUR_ORG_ID>
+          VERCEL_PROJECT_ID: <YOUR_PROJECT_ID>

@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "typescript": "5.2.2"
+  },
+  "main": "index.ts",
+  "name": "@test/tsconfig"
+}
